@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pesquisa</title>
+</head>
+<body bgcolor="LimeGreen">
+    <h1 align="center"><font color="White"> Cadastro  Acadêmico</font></h1>
+    <table width="800" align="center" bgcolor="white">
+        <tr><td>
+            <form action="enviar.php" method="post" name="cadastro">
+                <fieldset>
+                <table>
+                    <legend>Informe seus dados:</legend>
+                        <tr>
+                            <td><label> Nome: </label></td>
+                            <td><input type="text" id="Nome" name="Nome" size="70" maxlength="50" placeholder="Digite seu Nome" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">Número de Contato:</label></td>
+                            <td><input type="tel" id="phone" name="phone" placeholder="DD-12345-6789" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" required></td>
+                        </tr>
+                        <tr>
+                            <td><label> Email: </label></td>
+                            <td><input type="email" name="mail" id="mail" size="50" maxlength="40" placeholder="Digite seu E-mail" required></td>
+                        </tr>
+                        <tr>
+                            <td><label> Senha:</label></td>
+                            <td><input type="password" name="senha" id="senha" maxlength="8" placeholder="Digite sua senha" required></td>
+                        </tr>
+                    </table>
+                </fieldset>
+         
+                <fieldset>
+                    <table>
+                    <legend> Pesquisa: </legend>
+                        <label> Você é do Sexo?</label>
+                            <input type="radio" name="sexo" id="Masculino" required>
+                        <label> Masculino </label>
+                            <input type="radio" name="sexo" id="Feminino" required>
+                        <label> Feminino </label>
+                    <br><br>
+                        <label> Data de Nascimento</label>
+                        <input type="date" id="data_nasc" name="data_nasc"
+                    min="1924-01-01" max="2014-01-01" required>
+                        <br><br>
+                            <label> Qual sua Altura?</label>
+                                <input type="height" name="height" id="height" size="1" maxlength="3" min="130" max="200" required> cm
+                        <br><br>
+                            <label> Qual seu Peso?</label>
+                                <input type="number" name="weight" id="weight" size="1" maxlength="3"  min="40" max="120" required> kg
+                        <br><br>
+                            <label> Você é de que Região?</label>
+                        
+                            <select id="região" name="região" required>
+                                <option value="" selected="selected"> Selecione: </option>
+                                <optgroup label="Brasil">
+                                    <option value="Norte"> Norte</option>
+                                    <option value="Nordeste"> Nordeste</option>
+                                    <option value="Centro-Oeste"> Centro-Oeste</option>
+                                    <option value="Sul"> Sul </option>
+                                    <option value="Sudeste"> Sudeste</option>
+                                </optgroup>
+                            </select>
+                        <br><br>
+                            <label>Você Utiliza Redes Sociais?</label>
+                                <input type="radio" name="redesocial" id="Sim" required>
+                            <label> Sim </label>
+                                <input type="radio" name="redesocial" id="Nao" required>
+                            <label> Não </label>
+                        <br><br>
+                            <label> Se sim, por quanto tempo você utiliza por dia?</label>
+                        <br>
+                                <input type="radio" name="hora" id="-1hr" required>
+                            <label> 1 hora ou menos </label>
+                        <br>
+                                <input type="radio" name="hora" id="1-2hr" required>
+                            <label> 1 a 2 horas </label>
+                        <br>
+                                <input type="radio" name="hora" id="2-3hr" required>
+                            <label> 2 a 3 horas </label>
+                        <br>
+                                <input type="radio" name="hora" id="3-4hr" required>
+                            <label> 3 a 4 horas </label>
+                            <br>
+                                <input type="radio" name="hora" id="3-5hr" required>
+                            <label> 4 a 5 horas </label>
+                            <br>
+                                <input type="radio" name="hora" id="+5hr" required>
+                            <label> +5 de horas </label>
+                            <br>
+                                <input type="radio" name="hora" id="0hr" required>
+                            <label> Não utilizo </label>
+                            <br><br>
+                            <label>Você Pratica alguma Atividade Física na semana?</label>
+                            <br>
+                                <input type="radio" name="atividadefisica" id="Nao2" required>
+                            <label> Não Pratico </label>
+                            <br>
+                                <input type="radio" name="atividadefisica" id="30min" required>
+                            <label> Pratico por pelo menos 30 min </label>
+                            <br>
+                                <input type="radio" name="atividadefisica" id="1a2hr" required>
+                            <label> Pratico de 1 a 2 horas </label>
+                            <br>
+                                <input type="radio" name="atividadefisica" id="2a3hr" required>
+                            <label> Pratico de 2 a 3 horas </label>
+                            <br>
+                                <input type="radio" name="atividadefisica id="+3hr" required>
+                            <label> Pratico mais de 3 horas </label>
+                            <br><br>
+
+                            <label> Quais Partes do Músculo Gostaria de Treinar mais?</label>
+                            <br>
+                            <label>
+                                <input type="checkbox" id="Braco" name="Braco" value="Braco"> Braço
+                            </label>
+                            <br>
+                            <label>
+                                <input type="checkbox" id="Peito" name="Peito" value="Peito"> Peito
+                            </label>
+                            <br>
+                            <label>
+                                <input type="checkbox" id="Abdomen" name="Abdomen" value="Abdomen"> Abdomen
+                            </label>
+                            <br>
+                            <label>
+                                <input type="checkbox" id="Costas e Ombros" name="Costas e Ombros" value="Costas e Ombros"> Costas e Ombros
+                            </label>
+                            <br>
+                            <label>
+                                <input type="checkbox" id="Perna" name="Perna" value="Perna"> Perna
+                            </label>
+                            <br>
+                            <label>
+                            <br><br>
+                            <label>Gostaria de frequentar tantos dias na academia?</label>
+                            <br>
+                                <input type="radio" name="frequencia" id="1dia" required>
+                            <label> 1 dia da semana </label>
+                            <br>
+                                <input type="radio" name="frequencia" id="2dia" required>
+                            <label> 2 dias da semana </label>
+                            <br>
+                                <input type="radio" name="frequencia" id="3dia" required>
+                            <label> 3 dias da semana </label>
+                            <br>
+                                <input type="radio" name="frequencia" id="4dia" required>
+                            <label> 4 dias da semana </label>
+                            <br>
+                                <input type="radio" name="frequencia" id="5dia" required>
+                            <label> 5 dias da semana </label>
+                            <br>
+                                <input type="radio" name="frequencia" id="7dia" required>
+                            <label> A semana inteira </label>
+                            <br><br>
+                                <label for="appt">Selecione a Hora que deseja frequentar</label>
+                                <input type="time" id="appt" name="appt" min="08:00" max="19:00" required> das <input type="time" id="appt" name="appt" min="09:00" max="20:00" required> 
+                            <br><br>
+                        <input type="submit" id="enviar" name="enviar" value="ENVIAR DADOS">
+                        <input type="reset" id="limpar" name="limpar" value="LIMPAR">
+                    </table>
+                </fieldset>
+             </form>
+        </td></tr>
+    </table>
+</body>
+</html>
